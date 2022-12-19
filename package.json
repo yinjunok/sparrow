@@ -1,0 +1,39 @@
+{
+  "name": "sparrow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix",
+    "test": "jest --coverage",
+    "test-live": "cross-env DEBUG_MODE=1 jest --coverage",
+    "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.7.5",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/preset-env": "^7.20.2",
+    "jest": "26.0.1",
+    "jest-electron": "^0.1.12"
+  }
+}
